@@ -47,7 +47,7 @@ export default function Navbar({ darkMode, setDarkMode, openResumeModal }) {
           : 'bg-[#fafafa]/85 backdrop-blur-md border-b border-black/[0.06]'
         : 'bg-transparent'
     }`}>
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
         
         {/* Name / Brand */}
         <a 
@@ -55,12 +55,12 @@ export default function Navbar({ darkMode, setDarkMode, openResumeModal }) {
           className="flex items-center gap-2.5 group"
         >
           <span className={`font-semibold tracking-tight text-sm sm:text-base transition-colors ${
-            darkMode ? 'text-zinc-100 group-hover:text-amber-400' : 'text-zinc-900 group-hover:text-amber-600'
+            darkMode ? 'text-zinc-100 group-hover:text-sky-400' : 'text-slate-900 group-hover:text-sky-600'
           }`}>
             {personalInfo.name}
           </span>
           <span className={`text-xs font-mono hidden sm:inline ${
-            darkMode ? 'text-zinc-500' : 'text-zinc-400'
+            darkMode ? 'text-zinc-400' : 'text-zinc-500'
           }`}>
             / Full Stack Java Developer
           </span>
@@ -74,7 +74,7 @@ export default function Navbar({ darkMode, setDarkMode, openResumeModal }) {
               href={link.href}
               className={`text-xs font-medium transition-colors ${
                 activeSection === link.href.replace('#', '')
-                  ? darkMode ? 'text-amber-400' : 'text-amber-600 font-semibold'
+                  ? darkMode ? 'text-sky-400 font-semibold' : 'text-sky-600 font-semibold'
                   : darkMode 
                     ? 'text-zinc-400 hover:text-zinc-100' 
                     : 'text-zinc-600 hover:text-zinc-900'

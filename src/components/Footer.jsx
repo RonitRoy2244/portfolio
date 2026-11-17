@@ -10,7 +10,7 @@ export default function Footer({ darkMode }) {
 
   return (
     <footer className="py-12 border-t border-zinc-200 dark:border-zinc-800/80 text-xs font-mono text-zinc-500">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         
         <div>
           <span>© {new Date().getFullYear()} {personalInfo.name}</span>
