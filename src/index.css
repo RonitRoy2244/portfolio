@@ -3,6 +3,7 @@
 @layer base {
   :root {
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
   }
 
   html {
@@ -10,7 +11,13 @@
     font-family: var(--font-sans);
   }
 
-  /* MANDATORY from modern-web-guidance for dialog */
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* MANDATORY from modern-web-guidance for native dialog */
   dialog:modal {
     overscroll-behavior: contain;
   }
@@ -18,23 +25,23 @@
   dialog::backdrop {
     overflow: hidden;
     overscroll-behavior: contain;
-    background: rgba(2, 6, 23, 0.75);
-    backdrop-filter: blur(8px);
+    background: rgba(10, 11, 13, 0.8);
+    backdrop-filter: blur(6px);
   }
 }
 
-/* Custom scrollbar */
+/* Tasteful subtle scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+  background: rgba(150, 150, 150, 0.2);
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: rgba(150, 150, 150, 0.35);
 }
