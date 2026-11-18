@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import BentoPortfolio from './components/BentoPortfolio';
-import Footer from './components/Footer';
+import SpotlightLayout from './components/SpotlightLayout';
 import ResumeModal from './components/ResumeModal';
 
 export default function App() {
@@ -22,27 +20,14 @@ export default function App() {
 
   return (
     <div className={`min-h-screen transition-colors duration-200 font-sans ${
-      darkMode ? 'bg-[#08090c] text-zinc-100' : 'bg-[#f8fafc] text-slate-900'
+      darkMode ? 'bg-[#0b1120] text-slate-100' : 'bg-slate-50 text-slate-900'
     }`}>
-      {/* Navigation */}
-      <Navbar
+      <SpotlightLayout
         darkMode={darkMode}
         setDarkMode={setDarkMode}
         openResumeModal={() => setIsResumeOpen(true)}
       />
 
-      {/* Main Bento Grid Flow */}
-      <main>
-        <BentoPortfolio
-          darkMode={darkMode}
-          openResumeModal={() => setIsResumeOpen(true)}
-        />
-      </main>
-
-      {/* Footer */}
-      <Footer darkMode={darkMode} />
-
-      {/* Resume Modal */}
       <ResumeModal
         isOpen={isResumeOpen}
         onClose={() => setIsResumeOpen(false)}
